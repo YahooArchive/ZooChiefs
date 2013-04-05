@@ -3,8 +3,6 @@ import logging
 import subprocess
 import time
 
-from chief import utils
-
 from kazoo.client import KazooClient
 
 LOG = logging.getLogger(__name__)
@@ -44,4 +42,4 @@ class ZKProcessLeader(ZKFunctionLeader):
         return (out, err, sp.returncode)
 
     def start(self, binary_name, *args):
-        return FunctionLeader.start(self, self._run_it, binary_name, *args)
+        return ZKFunctionLeader.start(self, self._run_it, binary_name, *args)
