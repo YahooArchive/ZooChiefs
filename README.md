@@ -36,3 +36,31 @@ Example
     
     # On a second terminal
     solo.py -v  `which python` tools/spinner.py
+
+Monitoring
+----------
+
+    # Start zkcli
+    sudo zkCli.sh -server 127.0.0.1:2181
+    
+    # Use normal zkCli commands  
+    get path [watch]
+	 ls path [watch]
+	 set path data [version]
+	 rmr path
+	 delquota [-n|-b] path
+	 quit 
+	 printwatches on|off
+	 create [-s] [-e] path data acl
+	 stat path [watch]
+	 close 
+	 ls2 path [watch]
+	 history 
+	 listquota path
+	 setAcl path acl
+	 getAcl path
+	 sync path
+	 redo cmdno
+	 addauth scheme auth
+	 delete path [version]
+	 setquota -n|-b val path
